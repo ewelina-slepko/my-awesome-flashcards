@@ -7,6 +7,7 @@ import { ListComponent } from './dashboard/list/list.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import {FormsModule} from "@angular/forms";
 import { DetailsComponent } from './details/details.component';
+import {SharedModule} from "../shared/shared.module";
 
 
 
@@ -16,7 +17,8 @@ import { DetailsComponent } from './details/details.component';
     CommonModule,
     PanelRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class PanelModule { }

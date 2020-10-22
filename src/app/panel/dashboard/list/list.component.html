@@ -1,4 +1,10 @@
-<div *ngFor="let word of wordsList" (click)="navigateToDetails(word)" @fade>
-  <p class="list-element">{{word.native}}</p>
-  <hr class="line">
+<ng-container *ngIf="wordsList.length > 0">
+  <div *ngFor="let word of wordsList" (click)="navigateToDetails(word)" @fade>
+    <p class="list-element">{{word.native}}</p>
+    <hr class="line">
+  </div>
+</ng-container>
+
+<div *ngIf="wordsList.length === 0" class="no-data-container">
+  <no-data-info text="List is empty"></no-data-info>
 </div>
