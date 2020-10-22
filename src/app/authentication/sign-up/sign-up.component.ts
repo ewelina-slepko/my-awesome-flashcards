@@ -20,7 +20,7 @@ export class SignUpComponent {
     if (form.status === 'VALID') {
       this.authService.signUpWithEmailAndPassword(form.form.value)
         .then(() => {
-          this.router.navigate(['/initialsettings/step1']);
+          this.router.navigate(['/home']);
         });
     }
   }

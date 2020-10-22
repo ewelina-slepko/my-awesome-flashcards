@@ -22,7 +22,8 @@ export class SignInComponent {
       this.authService.signInWithEmailAndPassword(form.form.value.email, form.form.value.password)
         .then((res: UserCredential) => {
             if (res?.user) {
-              this.router.navigate(['/dashboard']);
+              console.log(res.user)
+              this.router.navigate(['/home']);
             }
           }
         );
