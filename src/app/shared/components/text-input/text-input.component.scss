@@ -1,0 +1,69 @@
+@import "src/assets/styles/colors.scss";
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 0 62.5rem #fff inset;
+  transition: background-color 5000s 0s;
+}
+
+:host {
+  display: flex;
+  justify-content: left;
+  margin: .75rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.form-control {
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $medium-gray;
+  margin-bottom: 1px;
+  outline: none;
+
+  &:focus {
+    border-bottom: 2px solid $main-color-cyan;
+    margin-bottom: 0;
+  }
+}
+
+.form-control-placeholder {
+  position: absolute;
+  transition: all 200ms;
+  opacity: 0.5;
+  bottom: 0.5rem;
+  font-size: 0.875rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  font-size: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+}
+
+.check-icon {
+  color: #27E0C1;
+  margin-left: -2rem;
+}
+
+.eye-icon {
+  margin-left: -2.5rem;
+  color: $medium-gray;
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
