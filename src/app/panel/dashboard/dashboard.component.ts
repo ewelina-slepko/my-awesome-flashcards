@@ -8,16 +8,12 @@ import {basicAnimation} from "../../shared/animations/basic-animation";
   styleUrls: ['./dashboard.component.scss'],
   animations: basicAnimation
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
   constructor(private router: Router) {
-  }
-
-  ngOnInit(): void {
   }
 
   goToAddForm() {
     this.router.navigateByUrl('home/add')
   }
-
 }

@@ -1,4 +1,4 @@
-<div *ngFor="let word of wordsList">
+<div *ngFor="let word of wordsList" (click)="navigateToDetails(word)" @fade>
   <p class="list-element">{{word.native}}</p>
-  <hr>
+  <hr class="line">
 </div>
