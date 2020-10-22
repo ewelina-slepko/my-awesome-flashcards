@@ -1,23 +1,26 @@
 <form #signUpForm="ngForm" (ngSubmit)="signUpWithEmailAndPassword(signUpForm)" class="form-grid" @fade>
 
   <div class="form-container">
-  <h2 class="header">Sign Up!</h2>
+    <h2 class="header">Sign Up!</h2>
 
-  <text-input ngModel name="name" class="sign-up-field" namePattern required></text-input>
-  <validation-msg [form]="signUpForm" name="Name" text="Name must contain at least 2 letters"></validation-msg>
+    <mat-form-field><input matInput placeholder="Name" name="name" ngModel required></mat-form-field>
+    <validation-msg [form]="signUpForm" name="name" text="Name must contain at least 2 letters"></validation-msg>
 
-  <text-input ngModel name="email" class="sign-up-field" email required></text-input>
-  <validation-msg [form]="signUpForm" name="Email" text="Invalid e-mail address"></validation-msg>
+    <mat-form-field><input matInput placeholder="E-mail" name="email" ngModel required></mat-form-field>
+    <validation-msg [form]="signUpForm" name="email" text="Invalid e-mail address"></validation-msg>
 
-  <text-input ngModel name="password" class="sign-up-field" type="password" passwordPattern required></text-input>
-  <validation-msg [form]="signUpForm"
-                  name="password"
-                  text=" Password must be at least 8 characters, contain at least one upper case, one lower case and one digit">
-  </validation-msg>
+    <mat-form-field>
+      <input matInput placeholder="Password" name="password" type="password" ngModel passwordPattern required>
+    </mat-form-field>
+    <validation-msg [form]="signUpForm"
+                    name="password"
+                    text=" Password must be at least 8 characters, contain at least one upper case, one lower case and one digit">
+    </validation-msg>
+
   </div>
 
   <div class="btn-container">
-    <button type="submit">Sign Up!</button>
+    <button mat-raised-button color="primary" type="submit">Sign Up!</button>
     <p>Do you have an account? <a routerLink="/auth/signin">Sign In!</a></p>
   </div>
 

@@ -1,20 +1,22 @@
 <form #signInForm="ngForm" (ngSubmit)="signInWithEmailAndPassword(signInForm)" class="form-grid" @fade>
 
   <div class="form-container">
-  <h2 class="header">It's great<br> to see you again!</h2>
+    <h1 class="header">Awesome <br>Flashcards</h1>
 
-  <text-input ngModel name="email" class="sign-in-field" email required></text-input>
-  <validation-msg [form]="signInForm" name="Email" text="Invalid e-mail address"></validation-msg>
+    <mat-form-field><input matInput placeholder="E-mail" name="email" ngModel required></mat-form-field>
+    <validation-msg [form]="signInForm" name="Email" text="Invalid e-mail address"></validation-msg>
 
-  <text-input ngModel name="password" class="sign-in-field" type="password" passwordPattern required></text-input>
-  <validation-msg [form]="signInForm"
-                  name="password"
-                  text=" Password must be at least 8 characters, contain at least one upper case, one lower case and one digit">
-  </validation-msg>
+    <mat-form-field>
+      <input matInput placeholder="Password" name="password" type="password" ngModel passwordPattern required>
+    </mat-form-field>
+    <validation-msg [form]="signInForm"
+                    name="password"
+                    text=" Password must be at least 8 characters, contain at least one upper case, one lower case and one digit">
+    </validation-msg>
   </div>
 
   <div class="btn-container">
-    <button type="submit">Sign In!</button>
+    <button mat-raised-button color="primary" type="submit">Sign In!</button>
     <p>Don't you have an account? <a routerLink="/auth/signup">Sign Up!</a></p>
   </div>
 </form>

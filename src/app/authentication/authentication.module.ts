@@ -10,6 +10,7 @@ import {TextInputModule} from '../shared/components/text-input/text-input.module
 import {PasswordPatternDirective} from './validation/password-pattern.directive';
 import {NamePatternDirective} from './validation/name-pattern.directive';
 import { ValidationMsgComponent } from './validation/validation-msg/validation-msg.component';
+import {MaterialModule} from "../shared/material/material.module";
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ValidationMsgComponent } from './validation/validation-msg/validation-m
     AuthenticationRoutingModule,
     FormsModule,
     TextInputModule,
+    MaterialModule,
   ]
 })
 export class AuthenticationModule {
