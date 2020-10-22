@@ -30,6 +30,6 @@ export class AddFormComponent {
   }
 
   navigateToList() {
-    this.router.navigateByUrl('home')
+    this.router.navigateByUrl('home');
   }
 }

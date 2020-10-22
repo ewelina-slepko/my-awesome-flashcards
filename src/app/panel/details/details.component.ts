@@ -23,6 +23,6 @@ export class DetailsComponent implements OnInit {
   }
 
   navigateToList() {
-    this.router.navigateByUrl('home')
+    this.router.navigateByUrl('home');
   }
 }

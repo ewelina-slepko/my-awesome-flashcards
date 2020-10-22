@@ -25,11 +25,11 @@ export class ListComponent implements OnInit {
   }
 
   getWordsList() {
-    this.apiService.getWordsList().subscribe(res => this.wordsList = res)
+    this.apiService.getWordsList().subscribe(res => this.wordsList = res);
   }
 
   navigateToDetails(word: WordDto) {
-    this.router.navigateByUrl('home/details')
+    this.router.navigateByUrl('home/details');
     this.detailsService.details = word;
   }
 }
