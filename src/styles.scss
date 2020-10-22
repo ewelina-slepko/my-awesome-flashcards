@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/assets/styles/colors.scss";
+
+$top-card: 3.5rem;
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  color: $dark-gray;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #4E4BED;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
