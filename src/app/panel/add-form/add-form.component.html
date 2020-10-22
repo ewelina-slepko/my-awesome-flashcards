@@ -1,0 +1,18 @@
+<span class="material-icons navigate-before" (click)="navigateToList()">navigate_before</span>
+<form #addForm="ngForm" (ngSubmit)="save(addForm)" class="add-form-container" @fade>
+
+  <div class="form">
+    <h1 class="header">Add new word</h1>
+    <mat-form-field class="input-container">
+      <input matInput placeholder="Your native language" name="polish" ngModel required>
+    </mat-form-field>
+
+    <mat-form-field class="input-container">
+      <input matInput placeholder="Foreign Language" name="foreign" ngModel required>
+    </mat-form-field>
+  </div>
+
+  <div class="btn-container">
+    <button mat-raised-button color="primary" type="submit">Sign In!</button>
+  </div>
+</form>
