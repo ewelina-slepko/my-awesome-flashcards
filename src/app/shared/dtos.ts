@@ -1,4 +1,4 @@
-export interface NewWordRequest {
+export interface WordDto {
   native: string;
   foreign: number;
   uid: string;

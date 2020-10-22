@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ApiService} from "../../../shared/api.service";
+import {WordDto} from "../../../shared/dtos";
 
 @Component({
   selector: 'app-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  wordsList: WordDto[];
+
+  constructor(private apiService: ApiService) {
+  }
 
   ngOnInit(): void {
+    this.getWordsList();
+  }
+
+  getWordsList() {
+    this.apiService.getWordsList().subscribe(res => this.wordsList = res)
   }
 
 }

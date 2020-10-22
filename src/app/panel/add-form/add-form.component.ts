@@ -4,7 +4,7 @@ import {basicAnimation} from "../../shared/animations/basic-animation";
 import {Router} from "@angular/router";
 import {ApiService} from "../../shared/api.service";
 import {AuthenticationService} from "../../authentication/authentication.service";
-import {NewWordRequest} from "../../shared/dtos";
+import {WordDto} from "../../shared/dtos";
 
 @Component({
   selector: 'app-add-form',
@@ -14,13 +14,12 @@ import {NewWordRequest} from "../../shared/dtos";
 })
 export class AddFormComponent {
 
-  newWordRequest = {} as NewWordRequest;
+  newWordRequest = {} as WordDto;
 
   constructor(private router: Router,
               private apiService: ApiService,
               private authenticationService: AuthenticationService) {
   }
-
 
   save(form: NgForm) {
     this.newWordRequest = form.form.value;
