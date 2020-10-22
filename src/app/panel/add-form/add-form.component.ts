@@ -22,9 +22,11 @@ export class AddFormComponent {
   }
 
   save(form: NgForm) {
-    this.newWordRequest = form.form.value;
-    this.newWordRequest.uid = this.authenticationService.currentUser.uid;
-    this.apiService.addWord(this.newWordRequest).then(() => this.navigateToList());
+    if (form.form.status !== 'INVALID') {
+      this.newWordRequest = form.form.value;
+      this.newWordRequest.uid = this.authenticationService.currentUser.uid;
+      this.apiService.addWord(this.newWordRequest).then(() => this.navigateToList());
+    }
   }
 
   navigateToList() {
