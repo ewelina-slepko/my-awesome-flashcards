@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {basicAnimation} from "../../shared/animations/basic-animation";
 import {Router} from "@angular/router";
+import {ApiService} from "../../shared/api.service";
+import {AuthenticationService} from "../../authentication/authentication.service";
+import {NewWordRequest} from "../../shared/dtos";
 
 @Component({
   selector: 'app-add-form',
@@ -11,12 +14,18 @@ import {Router} from "@angular/router";
 })
 export class AddFormComponent {
 
-  constructor(private router: Router) {
+  newWordRequest = {} as NewWordRequest;
+
+  constructor(private router: Router,
+              private apiService: ApiService,
+              private authenticationService: AuthenticationService) {
   }
 
 
   save(form: NgForm) {
-    console.log(form.form.value);
+    this.newWordRequest = form.form.value;
+    this.newWordRequest.uid = this.authenticationService.currentUser.uid;
+    this.apiService.addWord(this.newWordRequest).then(() => this.navigateToList());
   }
 
   navigateToList() {

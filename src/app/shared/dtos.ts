@@ -1,4 +1,5 @@
-export interface TimestampDto {
-  seconds: number;
-  nanoseconds: number;
+export interface NewWordRequest {
+  native: string;
+  foreign: number;
+  uid: string;
 }
