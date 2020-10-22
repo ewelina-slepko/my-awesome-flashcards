@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "my-awesome-flashcards"
+  },
+  "targets": {
+    "my-awesome-flashcards": {
+      "hosting": {
+        "my-awesome-flashcards": [
+          "my-awesome-flashcards"
+        ]
+      }
+    }
+  }
+}

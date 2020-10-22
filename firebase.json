@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "my-awesome-flashcards",
+      "public": "dist/my-awesome-flashcards",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
