@@ -6,11 +6,12 @@ import {MaterialModule} from "../shared/material/material.module";
 import { ListComponent } from './dashboard/list/list.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import {FormsModule} from "@angular/forms";
+import { DetailsComponent } from './details/details.component';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, ListComponent, AddFormComponent],
+  declarations: [DashboardComponent, ListComponent, AddFormComponent, DetailsComponent],
   imports: [
     CommonModule,
     PanelRoutingModule,
