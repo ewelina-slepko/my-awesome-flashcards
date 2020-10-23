@@ -3,6 +3,7 @@ import {NgModule} from "@angular/core";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {AddFormComponent} from "./add-form/add-form.component";
 import {DetailsComponent} from "./details/details.component";
+import {GameComponent} from "./game/game.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'details',
     component: DetailsComponent
+  },
+  {
+    path: 'game',
+    component: GameComponent
   },
 ];
 

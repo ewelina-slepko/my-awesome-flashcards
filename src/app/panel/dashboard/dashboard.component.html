@@ -1,4 +1,9 @@
 <app-list></app-list>
-<button mat-fab color="primary" class="add-button" (click)="goToAddForm()">
-  <span class="material-icons">add</span>
-</button>
+<div class="btn-container">
+  <button mat-fab color="primary" class="btn" (click)="goTo(addFormUrl)">
+    <span class="material-icons">add</span>
+  </button>
+  <button mat-fab color="primary" class="btn" (click)="goTo(gameUrl)">
+    <span class="material-icons">play_arrow</span>
+  </button>
+</div>

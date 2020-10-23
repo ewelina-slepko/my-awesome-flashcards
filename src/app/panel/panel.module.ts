@@ -8,11 +8,12 @@ import { AddFormComponent } from './add-form/add-form.component';
 import {FormsModule} from "@angular/forms";
 import { DetailsComponent } from './details/details.component';
 import {SharedModule} from "../shared/shared.module";
+import { GameComponent } from './game/game.component';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, ListComponent, AddFormComponent, DetailsComponent],
+  declarations: [DashboardComponent, ListComponent, AddFormComponent, DetailsComponent, GameComponent],
   imports: [
     CommonModule,
     PanelRoutingModule,

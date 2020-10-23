@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {basicAnimation} from "../../shared/animations/basic-animation";
 
@@ -10,10 +10,13 @@ import {basicAnimation} from "../../shared/animations/basic-animation";
 })
 export class DashboardComponent {
 
+  addFormUrl = 'home/add';
+  gameUrl = 'home/game';
+
   constructor(private router: Router) {
   }
 
-  goToAddForm() {
-    this.router.navigateByUrl('home/add')
+  goTo(url: string) {
+    this.router.navigateByUrl(url)
   }
 }

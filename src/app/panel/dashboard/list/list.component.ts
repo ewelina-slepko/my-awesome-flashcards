@@ -13,7 +13,7 @@ import {basicAnimation} from "../../../shared/animations/basic-animation";
 })
 export class ListComponent implements OnInit {
 
-  wordsList: WordDto[];
+  wordsList: WordDto[] = [];
 
   constructor(private apiService: ApiService,
               private router: Router,

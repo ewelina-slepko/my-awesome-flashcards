@@ -3,9 +3,14 @@
   height: 100%;
 }
 
-.add-button {
+.btn-container {
   position: absolute;
   right: 0;
   bottom: 0;
-  margin: 2rem;
+  margin: 2rem .5rem;
+  display: flex;
+}
+
+.btn {
+  margin: 0 .25rem;
 }
