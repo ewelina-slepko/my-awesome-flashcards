@@ -1,14 +1,13 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {SignInComponent} from "./authentication/sign-in/sign-in.component";
 import {AuthGuard} from "./shared/guard/auth.guard";
 
 
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    component: SignInComponent
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
   {
     path: 'auth',

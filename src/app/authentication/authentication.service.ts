@@ -39,7 +39,7 @@ export class AuthenticationService {
   }
 
   logout() {
-    this.auth.signOut().then(res => this.router.navigateByUrl('/auth/signin'));
+    this.auth.signOut().then(() => this.router.navigateByUrl('/auth/signin'));
   }
 
   isAuthenticated() {
