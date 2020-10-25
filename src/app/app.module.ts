@@ -11,6 +11,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {FormsModule} from '@angular/forms';
 import {NotifierModule} from './shared/components/notifier/notifier.module';
 import {SharedModule} from './shared/shared.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {SharedModule} from './shared/shared.module';
     AppRoutingModule,
     NotifierModule,
     SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
