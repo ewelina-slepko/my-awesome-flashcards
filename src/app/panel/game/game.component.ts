@@ -2,17 +2,20 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ApiService} from "../../shared/api.service";
 import {WordDto} from "../../shared/dtos";
+import {basicAnimation} from "../../shared/animations/basic-animation";
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  styleUrls: ['./game.component.scss'],
+  animations: basicAnimation
 })
 export class GameComponent implements OnInit {
 
-  wordsList: WordDto[] = [];
+  wordsList: WordDto[];
+  wordsListAfterRandomize: WordDto[];
   randomWord: WordDto;
-  isForeignVisible = true;
+  isForeignWordVisible = true;
 
   constructor(private router: Router,
               private apiService: ApiService) {
@@ -29,23 +32,28 @@ export class GameComponent implements OnInit {
   getWordsList() {
     this.apiService.getWordsList().subscribe(res => {
       this.wordsList = res;
-      this.getRandomWord(true);
+      this.wordsListAfterRandomize = this.parseValue(this.wordsList);
+      this.getRandomWord();
     })
   }
 
-  getRandomWord(firstExecute = false) {
-    if (this.isForeignVisible) {
-      const i = Math.floor(Math.random() * this.wordsList.length);
-      this.randomWord = this.wordsList[i];
-      this.wordsList.splice(i, 1);
+  getRandomWord() {
+    if (this.isForeignWordVisible) {
+      const i = Math.floor(Math.random() * this.wordsListAfterRandomize.length);
+      this.randomWord = this.wordsListAfterRandomize[i];
+      this.wordsListAfterRandomize.splice(i, 1);
       if (this.listIsEmpty) {
-        this.getWordsList()
+        this.wordsListAfterRandomize = this.parseValue(this.wordsList)
       }
     }
-    this.isForeignVisible = !this.isForeignVisible;
+    this.isForeignWordVisible = !this.isForeignWordVisible;
+  }
+
+  parseValue(value: WordDto[]) {
+    return JSON.parse(JSON.stringify(value));
   }
 
   get listIsEmpty() {
-    return this.wordsList.length === 0;
+    return this.wordsListAfterRandomize.length === 0;
   }
 }

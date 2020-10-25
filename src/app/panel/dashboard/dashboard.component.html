@@ -1,9 +1,9 @@
-<app-list></app-list>
+<app-list [wordsList]="wordsList"></app-list>
 <div class="btn-container">
   <button mat-fab color="primary" class="btn" (click)="goTo(addFormUrl)">
     <span class="material-icons">add</span>
   </button>
-  <button mat-fab color="primary" class="btn" (click)="goTo(gameUrl)">
+  <button *ngIf="wordsList?.length > 0" mat-fab color="primary" class="btn" (click)="goTo(gameUrl)">
     <span class="material-icons">play_arrow</span>
   </button>
 </div>

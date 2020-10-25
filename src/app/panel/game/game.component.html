@@ -1,9 +1,9 @@
 <span class="material-icons navigate-before" (click)="navigateToList()">navigate_before</span>
-<div *ngIf="!listIsEmpty" class="wrapper" (click)="getRandomWord()">
-  <p>{{randomWord.native}}</p>
-  <h1 *ngIf="isForeignVisible">{{randomWord.foreign}}</h1>
+<div *ngIf=" wordsListAfterRandomize?.length > 0" class="wrapper" (click)="getRandomWord()">
+  <p @fade>{{randomWord.native}}</p>
+  <h1 *ngIf="isForeignWordVisible" @fade>{{randomWord.foreign}}</h1>
 </div>
 
-<div *ngIf="listIsEmpty">
+<div *ngIf="!wordsListAfterRandomize">
   <no-data-info text="First, fill your list of words to play a game"></no-data-info>
 </div>

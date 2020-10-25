@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ApiService} from "../../../shared/api.service";
 import {WordDto} from "../../../shared/dtos";
 import {Router} from "@angular/router";
@@ -13,7 +13,7 @@ import {basicAnimation} from "../../../shared/animations/basic-animation";
 })
 export class ListComponent implements OnInit {
 
-  wordsList: WordDto[] = [];
+  @Input() wordsList: WordDto[];
 
   constructor(private apiService: ApiService,
               private router: Router,
@@ -21,11 +21,6 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getWordsList();
-  }
-
-  getWordsList() {
-    this.apiService.getWordsList().subscribe(res => this.wordsList = res);
   }
 
   navigateToDetails(word: WordDto) {
