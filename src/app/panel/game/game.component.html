@@ -3,7 +3,3 @@
   <p @fade>{{randomWord.native}}</p>
   <h1 *ngIf="isForeignWordVisible" @fade>{{randomWord.foreign}}</h1>
 </div>
-
-<div *ngIf="!wordsListAfterRandomize">
-  <no-data-info text="First, fill your list of words to play a game"></no-data-info>
-</div>
