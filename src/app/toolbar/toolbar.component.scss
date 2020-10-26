@@ -1,0 +1,21 @@
+:host {
+  top: 0;
+  width: 100%;
+}
+
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+  font-size: .75rem;
+}
+
+.logout-icon {
+  font-size: .875rem;
+  padding-left: .25rem;
+}

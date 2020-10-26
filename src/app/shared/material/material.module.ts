@@ -27,6 +27,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatSlideToggleModule,
     MatNativeDateModule,
     MatButtonToggleModule,
-    MatRadioModule
+    MatRadioModule,
+    MatToolbarModule
   ],
   exports: [
     MatSidenavModule,
@@ -89,7 +91,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatNativeDateModule,
     MatButtonToggleModule,
     MatDialogModule,
-    MatRadioModule
+    MatRadioModule,
+    MatToolbarModule
   ]
 })
 export class MaterialModule {

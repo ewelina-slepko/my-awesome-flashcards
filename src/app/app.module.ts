@@ -12,10 +12,11 @@ import {FormsModule} from '@angular/forms';
 import {NotifierModule} from './shared/components/notifier/notifier.module';
 import {SharedModule} from './shared/shared.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import {MaterialModule} from "./shared/material/material.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppRoutingModule,
     NotifierModule,
     SharedModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

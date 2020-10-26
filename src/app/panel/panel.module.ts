@@ -9,17 +9,19 @@ import {FormsModule} from "@angular/forms";
 import { DetailsComponent } from './details/details.component';
 import {SharedModule} from "../shared/shared.module";
 import { GameComponent } from './game/game.component';
+import { PanelComponent } from './panel.component';
+import {ToolbarComponent} from "../toolbar/toolbar.component";
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, ListComponent, AddFormComponent, DetailsComponent, GameComponent],
+  declarations: [DashboardComponent, ListComponent, AddFormComponent, DetailsComponent, GameComponent, PanelComponent, ToolbarComponent],
   imports: [
     CommonModule,
     PanelRoutingModule,
     MaterialModule,
     FormsModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class PanelModule { }

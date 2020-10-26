@@ -3,7 +3,6 @@ import {Router} from "@angular/router";
 import {basicAnimation} from "../../shared/animations/basic-animation";
 import {ApiService} from "../../shared/api.service";
 import {WordDto} from "../../shared/dtos";
-import {AuthenticationService} from "../../authentication/authentication.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -18,8 +17,7 @@ export class DashboardComponent implements OnInit{
   gameUrl = 'home/game';
 
   constructor(private router: Router,
-              private apiService: ApiService,
-              private authenticationService: AuthenticationService) {
+              private apiService: ApiService) {
   }
 
   ngOnInit() {
@@ -32,9 +30,5 @@ export class DashboardComponent implements OnInit{
 
   goTo(url: string) {
     this.router.navigateByUrl(url)
-  }
-
-  logout() {
-    this.authenticationService.logout();
   }
 }
