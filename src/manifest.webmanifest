@@ -1,6 +1,6 @@
 {
-  "name": "my-awesome-flashcards",
-  "short_name": "my-awesome-flashcards",
+  "name": "My Awesome Flashcards",
+  "short_name": "My Awesome Flashcards",
   "theme_color": "#673ab7",
   "background_color": "#fafafa",
   "display": "standalone",
