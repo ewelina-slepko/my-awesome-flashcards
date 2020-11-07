@@ -1,5 +1,7 @@
 export interface WordDto {
   native: string;
-  foreign: number;
+  foreign: string;
+  nativeDescription: string;
+  foreignDescription: string;
   uid: string;
 }

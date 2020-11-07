@@ -1,15 +1,31 @@
-<span class="material-icons navigate-before" (click)="navigateToList()">navigate_before</span>
+<div class="navigate-before-container">
+  <span class="material-icons navigate-before" (click)="navigateToList()">navigate_before</span>
+</div>
 <form #addForm="ngForm" (ngSubmit)="save(addForm)" class="add-form-container" @fade>
 
   <div class="form">
     <h1 class="header">Add new word</h1>
-    <mat-form-field class="input-container">
-      <input matInput placeholder="Your native language" name="native" ngModel required>
-    </mat-form-field>
 
-    <mat-form-field class="input-container">
-      <input matInput placeholder="Foreign Language" name="foreign" ngModel required>
-    </mat-form-field>
+    <div class="section">
+      <mat-form-field class="input-container">
+        <input matInput placeholder="Native word" name="native" ngModel required>
+      </mat-form-field>
+
+      <mat-form-field class="input-container">
+        <input matInput placeholder="Description..." name="nativeDescription" ngModel>
+      </mat-form-field>
+    </div>
+
+
+    <div class="section">
+      <mat-form-field class="input-container">
+        <input matInput placeholder="Foreign word" name="foreign" ngModel required>
+      </mat-form-field>
+
+      <mat-form-field class="input-container">
+        <input matInput placeholder="Description..." name="foreignDescription" ngModel>
+      </mat-form-field>
+    </div>
   </div>
 
   <div class="btn-container">

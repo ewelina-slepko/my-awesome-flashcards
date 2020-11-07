@@ -1,5 +1,6 @@
 <span class="material-icons navigate-before" (click)="navigateToList()">navigate_before</span>
 <div *ngIf=" wordsListAfterRandomize?.length > 0" class="wrapper" (click)="getRandomWord()">
-  <p @fade>{{randomWord.native}}</p>
-  <h1 *ngIf="isForeignWordVisible" @fade>{{randomWord.foreign}}</h1>
+  <p class="native-word" @fade>{{randomWord.native}}</p>
+  <p class="native-description" @fade>{{randomWord.nativeDescription}}</p>
+  <h1 *ngIf="isForeignWordVisible" class="foreign-word" @fade>{{randomWord.foreign}}</h1>
 </div>

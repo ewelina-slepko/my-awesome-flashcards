@@ -1,7 +1,9 @@
 <div (click)="navigateToList()" class="container" @fade>
-  <span class="material-icons navigate-before">navigate_before</span>
   <div class="wrapper">
-    <p>{{details.native}}</p>
-    <h1>{{details.foreign}}</h1>
+    <div class="native-container">
+      <p class="native-word">{{details.native}}</p>
+      <p class="native-description">{{details.nativeDescription}}</p>
+    </div>
+    <h1 class="foreign-word">{{details.foreign}}</h1>
   </div>
 </div>
